@@ -1,12 +1,9 @@
+import _ from 'lodash';
 import React from 'react';
 import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
 
 function average(array) {
-  const length = array.length
-  const sum = array.reduce((a,b) => {
-    return a + b
-  })
-  return Math.round(sum / length);
+  return _.round(_.sum(array)/array.length);
 }
 
 export default (props) => {
